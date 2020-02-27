@@ -2,22 +2,26 @@
     background-image: url("../img/burgerpic2.png");
     background-repeat: no-repeat;
     background-position: right;
-    background-color: #000000;
+    background-color: #a04747;
     color: #ffffff;
     margin-top: 3%;
   }
   #newburger {
-    color: #5c5c5c;
+    color: #a04747;
   }
   #leftside {
-    background-color: #5c5c5c;
+    background-color: #a04747;
     color: white;
     text-align: center;
     font-size: 1.3em;
   }
   #rightside {
-    background-color: #e49322;
+    background-color: #a04747;
     color: white;
     text-align: center;
     font-size: 1.3em;
+  }
+
+button {
+    background-color:black;
   }

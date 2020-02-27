@@ -1,28 +1,23 @@
 <div class="container">
 
     <div class="jumbotron">
-        <h1>Order Your Burger </h1>
-        <p>Burger Orders for Pickup.</p>
-        <br>
-        <h2>Select a Burger or Sandwich</h2>
+        <h1>Select a Burger or Sandwich</h1>
         <panel>
             <form class="create-form">
                 <div class="form-group">
-                    <label for="newburger">Order Fresh Burger</label>
-                    {{!-- <input type="text" id="newburger" name="burger"> --}}
                     <select data-placeholder="" id="newburger" name="burger">
                         <option value="Nothing Selected" selected>Please Select a Sandwich</option>
                         <option value="Hamburger">Hamburger</option>
-                        <option value="CheeseBurger">CheeseBurger</option>
-                        <option value="DoubleBfChz">Double Up (double meat and cheese)</option>
-                        <option value="VeggieBurger">Veggie Burger</option>
-                        <option value="PulledPork">Pulled Pork Sandwich</option>
-                        <option value="ChichenClub">Chicken Club Sandwich</option>
-                        <option value="SteaknChz">Steak and Cheese Sandwich</option>
+                        <option value="Cheeseburger">Cheeseburger</option>
+                        <option value="Italian">Italian</option>
+                        <option value="BahnMi">Bahn Mi</option>
+                        <option value="RoastBeef">Roast Beef</option>
+                        <option value="Ham">Ham</option>
+                        <option value="Turkey">Turkey</option>
                     </select>
 
-                    <button type="submit" class="btn btn-success" id="addburger">
-                        <span class="fa fa-thumbs-up"></span>
+                    <button type="submit" class="btn" id="addburger">
+                        <span>Add</span>
                     </button>
                 </div>
             </form>
@@ -31,7 +26,7 @@
     <div class="row">
         <div class="col-sm-6">
             <div class="panel panel-default">
-                <div class="panel-heading" id="leftside"><strong>Order Your Burger</strong>
+                <div class="panel-heading" id="leftside"><strong>Shopping Cart</strong>
                     <p>Send order to cashier when ready for pick up</p>
                 </div>
                 <div class="panel-body">
@@ -42,7 +37,7 @@
 
                         <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
                         <button type="button" class="eatburger btn btn-warning" id="eatbutton" data-id="{{this.id}}"
-                            data-newDevoured="{{devour}}"><span class="fa fa-usd"></span></button>
+                            data-newDevoured="{{devour}}"><span>Order</span></button>
                         <hr>
                         {{/unless}}
                         {{/each}}
@@ -53,8 +48,8 @@
         </div>
         <div class="col-sm-6">
             <div class="panel panel-default">
-                <div class="panel-heading" id="rightside"><strong>Burger is Ready for Pick Up</strong>
-                    <p>Remove order from pick up when delivered</p>
+                <div class="panel-heading" id="rightside"><strong>Orders Ready for Pick Up</strong>
+                    <p>Remove when delivered</p>
                 </div>
                 <div class="panel-body">
                     <ul>
@@ -62,7 +57,7 @@
                         {{#if devoured}}
                         <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
                         <button type="button" class="trashburger btn btn-danger" id="trashbutton" data-id="{{this.id}}"
-                            data-newDevoured="{{devour}}"><span class="fa fa-trash"></span></button>
+                            data-newDevoured="{{devour}}"><span>Delete</span></button>
                         <hr>
                         {{/if}}
                         {{/each}}
