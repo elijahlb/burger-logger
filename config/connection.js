@@ -7,7 +7,15 @@ connection = mysql.createConnection({
     password: "dwak043s4kh524h4", 
     database: "c3ockqlggdt9focn"
 });
-};
+} else  {
+    var connection = mysql.createConnection({
+        port: 3306,
+        host: "localhost",
+        user: "root",
+        password: "password",
+        database: "burgers_db"
+    });
+}
 
 connection.connect(function(err) {
     if(err) {
