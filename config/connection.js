@@ -2,10 +2,10 @@ var mysql = require("mysql");
 
 if (process.env.JAWSDB_URL) {
 connection = mysql.createConnection({
-    host: "kil9uzd3tgem3naa.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    user: "bav343nip7vcaul2	",
-    password: "dwak043s4kh524h4", 
-    database: "c3ockqlggdt9focn"
+    host: "	kil9uzd3tgem3naa.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    user: "qnith47w2rp59z6g",
+    password: "zz65j4zfxvrtu9l0", 
+    database: "w6tni7d3xkebh1a2"
 });
 } else  {
     var connection = mysql.createConnection({
